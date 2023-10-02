@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="result10Style.css">
     <title>Document</title>
 </head>
 <body style="text-align: center">
@@ -80,32 +81,37 @@ if ($student5["name"] == null) {
     $student5["name"] = "Estudiante 5";
 }
 
-$avg1 = round(($student1["grade1"] + $student1["grade2"] + $student1["grade2"])/3, 1);
-$avg2 = round(($student2["grade1"] + $student2["grade2"] + $student2["grade2"])/3, 1);
-$avg3 = round(($student3["grade1"] + $student3["grade2"] + $student3["grade2"])/3, 1);
-$avg4 = round(($student4["grade1"] + $student4["grade2"] + $student4["grade2"])/3, 1);
-$avg5 = round(($student5["grade1"] + $student5["grade2"] + $student5["grade2"])/3, 1);
+$avg1 = round(($student1["grade1"] + $student1["grade2"] + $student1["grade2"]) / 3, 1);
+$avg2 = round(($student2["grade1"] + $student2["grade2"] + $student2["grade2"]) / 3, 1);
+$avg3 = round(($student3["grade1"] + $student3["grade2"] + $student3["grade2"]) / 3, 1);
+$avg4 = round(($student4["grade1"] + $student4["grade2"] + $student4["grade2"]) / 3, 1);
+$avg5 = round(($student5["grade1"] + $student5["grade2"] + $student5["grade2"]) / 3, 1);
 
 
 ?>
 <h1>Notas medias</h1>
-<div class="container">
-    <div style="">
-    <h2><?php echo $student1["name"]?></h2>
-    <h3>Nota media : <?php echo $avg1?></h3>
+<div class="container" id="result">
+    <div>
+        <h2><?php echo $student1["name"] ?></h2>
+        <h3>Nota media : <?php echo $avg1 ?></h3>
     </div>
+    <div>
 
-    <h2><?php echo $student2["name"]?></h2>
-    <h3>Nota media : <?php echo $avg2?></h3>
-
-    <h2><?php echo $student3["name"]?></h2>
-    <h3>Nota media : <?php echo $avg3?></h3>
-
-    <h2><?php echo $student4["name"]?></h2>
-    <h3>Nota media : <?php echo $avg4?></h3>
-
-    <h2><?php echo $student5["name"]?></h2>
-    <h3>Nota media : <?php echo $avg5?></h3>
+        <h2><?php echo $student2["name"] ?></h2>
+        <h3>Nota media : <?php echo $avg2 ?></h3>
+    </div>
+    <div>
+        <h2><?php echo $student3["name"] ?></h2>
+        <h3>Nota media : <?php echo $avg3 ?></h3>
+    </div>
+    <div>
+        <h2><?php echo $student4["name"] ?></h2>
+        <h3>Nota media : <?php echo $avg4 ?></h3>
+    </div>
+    <div>
+        <h2><?php echo $student5["name"] ?></h2>
+        <h3>Nota media : <?php echo $avg5 ?></h3>
+    </div>
 </div>
 </body>
 </html>

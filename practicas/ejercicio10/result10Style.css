@@ -1,0 +1,9 @@
+#result{
+    display: flex;
+    gap: 30px;
+}
+#result div{
+    border: solid;
+    border-radius: 20px;
+    padding: 20px;
+}

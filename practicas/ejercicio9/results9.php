@@ -14,6 +14,9 @@
     $adress = $_POST["adress"];
 
     echo "$name's adress is $adress";
+    /*echo $name
+    h1 'adress is h1
+    echo $adress*/
 ?>
 </h1>
 </body>
