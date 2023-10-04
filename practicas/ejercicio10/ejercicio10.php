@@ -7,12 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="result10Style.css">
+    <link rel="stylesheet" href="ejercicio10Style.css">
     <title>Document</title>
 </head>
 <body style="text-align: center">
 
 <?php
+/*Uso arays para cargar los datos de forma comoda, esto se
+podria sustituir por variables separadas*/
 $student1 = array(
     "name" => $_POST["studentName1"],
     "subject1" => $_POST["student1Subject1"],
@@ -22,6 +24,9 @@ $student1 = array(
     "grade2" => floatval($_POST["student1Grade2"]),
     "grade3" => floatval($_POST["student1Grade3"])
 );
+
+/*Esta validacion es para que si no se entrega nombre en el form aparezca algo por lo menos en vez
+de texto vacio*/
 if ($student1["name"] == null) {
     $student1["name"] = "Estudiante 1";
 }

@@ -13,6 +13,7 @@
 $num1 = $_POST["num1"];
 $num2 = $_POST["num2"];
 
+/*Esto es una validacion que si se quitara seguiria funcionando el codigo*/
 if (!is_numeric($num1) || !is_numeric($num2)) {
     echo "Introduce un numero (Los decimales van con punto no con coma)";
     return;

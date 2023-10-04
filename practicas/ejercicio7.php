@@ -10,6 +10,7 @@
 <h1>Dado 1 : <?php echo rand(1, 10) ?></h1>
 <h1>Dado 2 : <?php echo rand(1, 20) ?></h1>
 <h1>Dado 3 : <?php echo rand(1, 100) ?></h1>
+
 <div class="col-12">
     <button class="btn btn-primary" onclick="location.reload()" type="button">Tirar</button>
 </div>

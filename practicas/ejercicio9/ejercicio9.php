@@ -15,7 +15,7 @@
 
     echo "$name's adress is $adress";
     /*echo $name
-    h1 'adress is h1
+    <h1> 'adress is </h1>
     echo $adress*/
 ?>
 </h1>

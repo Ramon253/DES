@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>Inserte su nombre y direccion </h1>
-<form action="results9.php" method="post">
+<form action="ejercicio9.php" method="post">
     <div class="container">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"

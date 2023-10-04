@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>Inserte 2 numeros decimales :</h1>
-<form method="post" action="results8.php">
+<form method="post" action="ejercicio8.php">
     <div class="container">
         <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="numero 1" name="num1">

@@ -11,7 +11,8 @@
 </head>
 <body>
 <div class="container" style="text-align: center">
-    <form action="results10.php" method="post">
+    <form action="ejercicio10.php" method="post">
+        <!--Alumno 1 -->
         <h1>Inserte su nombre, el nombre de la asignatura y su nota</h1>
         <div class="container" style="margin: 50px; text-align: center">
             <h2>Estudiante 1</h2>
@@ -53,6 +54,7 @@
             </div>
         </div>
 
+        <!--Alumno 2-->
         <div class="container" style="margin: 50px; text-align: center">
             <h2>Estudiante 2</h2>
             <input type="text" class="form-control" placeholder="Nombre del estudiante"
@@ -92,7 +94,7 @@
                 </div>
             </div>
         </div>
-
+        <!--Alumno 3-->
         <div class="container" style="margin: 50px; text-align: center">
             <h2>Estudiante 3</h2>
             <input type="text" class="form-control" placeholder="Nombre del estudiante"
@@ -133,6 +135,7 @@
             </div>
         </div>
 
+        <!--Alumno 4-->
         <div class="container" style="margin: 50px; text-align: center">
             <h2>Estudiante 4</h2>
             <input type="text" class="form-control" placeholder="Nombre del estudiante"
@@ -173,6 +176,7 @@
             </div>
         </div>
 
+        <!--Alumno 5-->
         <div class="container" style="margin: 50px; text-align: center">
             <h2>Estudiante 5</h2>
             <input type="text" class="form-control" placeholder="Nombre del estudiante"
