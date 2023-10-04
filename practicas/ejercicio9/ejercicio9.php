@@ -10,9 +10,11 @@
 <body>
 <h1>
 <?php
+    //Asignacion
     $name = $_POST["userName"];
     $adress = $_POST["adress"];
 
+    //sacado por pantalla
     echo "$name's adress is $adress";
     /*echo $name
     <h1> 'adress is </h1>

@@ -13,8 +13,14 @@
 <body style="text-align: center">
 
 <?php
-/*Uso arays para cargar los datos de forma comoda, esto se
-podria sustituir por variables separadas*/
+/*Uso arrays para cargar los datos de forma comoda, esto se
+podria sustituir por variables separadas  como $student1Grade en vez de $student1["name"]
+que es como creo que es mejor y mas comodo, tambien cargo mas datos de los que se usan realmente
+(los nombres de las asignaturas) pero para algo se ha pedidido dicha informacion
+si el programa usara los nombres de las asignaturas esta seria la mejor forma de hacerlo,
+pero si se hiciera directamente
+$avg1 = ( floatval($_POST["student1Grade1"]) +  floatval($_POST["student1Grade3"]) +  floatval($_POST["student1Grade2"]))/3
+seria valido y nos ahorrariamos el array*/
 $student1 = array(
     "name" => $_POST["studentName1"],
     "subject1" => $_POST["student1Subject1"],
@@ -86,6 +92,7 @@ if ($student5["name"] == null) {
     $student5["name"] = "Estudiante 5";
 }
 
+//Creo las medias a mano
 $avg1 = round(($student1["grade1"] + $student1["grade2"] + $student1["grade2"]) / 3, 1);
 $avg2 = round(($student2["grade1"] + $student2["grade2"] + $student2["grade2"]) / 3, 1);
 $avg3 = round(($student3["grade1"] + $student3["grade2"] + $student3["grade2"]) / 3, 1);
@@ -94,6 +101,7 @@ $avg5 = round(($student5["grade1"] + $student5["grade2"] + $student5["grade2"]) 
 
 
 ?>
+<!--Saco por pantalla el nombre y la media-->
 <h1>Notas medias</h1>
 <div class="container" id="result">
     <div>
