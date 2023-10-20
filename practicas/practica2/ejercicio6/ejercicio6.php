@@ -114,7 +114,7 @@ if ($numGames == $player2Wins){
         <input id="player2Name" name="player2Name" type="hidden" value="<?= $player2Name ?>">
         <input id="numGames" name="numberOfGames" type="hidden" value="<?= $numGames ?>" required>
         <div>
-            <br><label for="player1">Jugador 1</label><br>
+            <br><label for="player1"><?= $player1Name ?></label><br>
             <select id="player1" name="player1" required>
                 <option value="1">Piedra</option>
                 <option value="2">Papel</option>
@@ -122,7 +122,7 @@ if ($numGames == $player2Wins){
             </select>
         </div>
         <div>
-            <br><label for="player2">Jugador 2</label><br>
+            <br><label for="player2"><?= $player2Name ?></label><br>
             <select id="player2" name="player2" required>
                 <option value="1">Piedra</option>
                 <option value="2">Papel</option>
