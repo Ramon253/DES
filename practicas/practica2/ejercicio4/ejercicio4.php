@@ -18,9 +18,9 @@ for ($i = 0; $i < 3; $i++) {
     $rolledDices[] = rand(1,6);
 }
 
-echo '<img src="../imgs/dado' . $rolledDices[0] . '.jpg" alt="dado' . $rolledDices[0] . '"><br> ';
-echo '<img src="../imgs/dado' . $rolledDices[1] . '.jpg" alt="dado' . $rolledDices[1] . '"><br>';
-echo '<img src="../imgs/dado' . $rolledDices[2] . '.jpg" alt="dado' . $rolledDices[2] . '"><br>';
+echo '<img src="../imgs/dice' . $rolledDices[0] . '.jpg" alt="dice' . $rolledDices[0] . '"><br> ';
+echo '<img src="../imgs/dice' . $rolledDices[1] . '.jpg" alt="dice' . $rolledDices[1] . '"><br>';
+echo '<img src="../imgs/dice' . $rolledDices[2] . '.jpg" alt="dice' . $rolledDices[2] . '"><br>';
 
 $sortedDices = $rolledDices;
 $checkUnique = array_unique($rolledDices);

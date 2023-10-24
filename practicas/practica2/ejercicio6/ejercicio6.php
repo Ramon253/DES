@@ -51,7 +51,7 @@ if ($player2Play == $player1Play) {
     $player1Wins++;
 }
 
-/*Aignacion de la imagen*/
+/*Asignacion de la imagen*/
 $player1Name = ($_POST["player1Name"] == null) ? "Jugador 1" : $_POST["player1Name"];
 $player2Name = ($_POST["player2Name"] == null) ? "Jugador 2" : $_POST["player2Name"];
 
@@ -84,11 +84,11 @@ switch ($player2Play) {
 <div class="container" style="display: flex">
     <div>
         <h3><?= $player1Name ?></h3><br>
-        <img src="../imgs/<?= $player1Img ?>.png" alt="<?= $player1Img ?>">
+        <img src="../imgs/rock/<?= $player1Img ?>.png" alt="<?= $player1Img ?>">
     </div>
     <div>
         <h3><?= $player2Name ?></h3><br>
-        <img src="../imgs/<?= $player2Img ?>.png" alt="<?= $player2Img ?>">
+        <img src="../imgs/rock/<?= $player2Img ?>.png" alt="<?= $player2Img ?>">
     </div>
 </div>
 <div class="container, result">
