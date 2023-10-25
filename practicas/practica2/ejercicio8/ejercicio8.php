@@ -1,10 +1,14 @@
 <?php
 $hand = [$_POST["Primera"], $_POST["Segunda"], $_POST["Tercera"], $_POST["Cuarta"], $_POST["Quinta"]];
 $suits = [];
-$numbers = [];
+$displayValues = [];
+$numericValues = [];
 
 $color = false;
 $full = false;
+$poker = false;
+$straight = false;
+
 
 if (count(array_unique($hand)) != 5){
     echo " <h1>Inserte 5 cartas distintas</h1>";
@@ -16,22 +20,33 @@ if (count(array_unique($hand)) != 5){
 
 foreach ($hand as $card) {
     if ($card[0] == 1) {
-        $numbers[] = 10;
+        $displayValues[] = 10;
         $suits[] = substr($card, 2);
         continue;
     }
-    $numbers[] = $card[0];
+    if (!is_numeric($card[0])){
+        switch ($card[0]){
+            case 'J': 
+        }
+    }
+
+    $displayValues[] = $card[0];
     $suits[] = substr($card, 1);
 }
 
+$sortedNumbers = $displayValues;
+sort($sortedNumbers);
+
 if (count(array_unique($suits)) == 1) {
     $color = true;
+
+
 }
 
-if(count(array_unique($numbers))== 2){
-    $full = true;
+if(count(array_unique($displayValues))== 2){
+    if ($sortedNumbers[1]  !== $sortedNumbers[3]) $full = true;
+    else $poker = true;
 }
-
 ?>
 
 <!doctype html>
@@ -58,7 +73,7 @@ if ($full)
         echo '<span style="width: 150px;  height: 250px;border: solid 2px; display: grid; border-radius: 10px;margin: 20px">';
 
         echo '<span style="place-self: start;margin:10px 0 0 10px;font-size: 25px;display: grid">';
-        echo $numbers[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
+        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
         echo '</span>';
 
         echo '<span style="place-self: center;height: 50%">';
@@ -66,7 +81,7 @@ if ($full)
         echo '</span>';
 
         echo '<span style="place-self: end;margin:0 10px 10px 0;font-size: 25px;display: grid;transform: rotate(180deg)">';
-        echo $numbers[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
+        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
         echo '</span>';
         echo '</span>';
     }
