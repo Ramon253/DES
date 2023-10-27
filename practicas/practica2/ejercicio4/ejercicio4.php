@@ -1,3 +1,50 @@
+<?php
+$dices = array();
+$isStraight = true;
+$isDouble = false;
+$isTriple = false;
+$isPoker = false;
+
+for ($i = 0; $i < 3; $i++) {
+    $dices[] = rand(1, 6);
+}
+
+$sortedDices = [$dices[0], $dices[0], $dices[0]];
+
+for ($j = 0; $j < 3; $j++) {
+    if ($sortedDices[0] < $dices[$j]) {
+        $sortedDices[1] = $sortedDices[0];
+        $sortedDices[0] = $dices[$j];
+    }
+    elseif ($sortedDices[2] > $dices[$j]) {
+        $sortedDices[1] = $sortedDices[2];
+        $sortedDices[2] = $dices[$j];
+    } else $sortedDices[1] = $dices[$j];
+
+}
+echo $sortedDices[0] . " " . $sortedDices[1] . " " . $sortedDices[2];
+
+
+//Ahora que se ha ordenado
+$prevPos = $sortedDices[0];
+for ($i = 1; $i < count($sortedDices); $i++) {
+    if ($prevPos === $sortedDices[$i] +1){
+        $prevPos = $sortedDices[$i];
+        continue;
+    }
+    $isStraight = false;
+    break;
+}
+
+if ($sortedDices[0] === $sortedDices[1] || $sortedDices[1] === $sortedDices[2]) {
+
+    if ($sortedDices[0] === $sortedDices[2]) {
+        $isTriple = true;
+        if ($sortedDices[0] = 1) $isPoker = true;
+
+    } else $isDouble = true;
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,33 +55,27 @@
     <title>Ejercicio 4</title>
 </head>
 <body>
+<?php
+if ($isStraight) {
+    echo "<h1>Te ha tocado escalera</h1>";
+}
+if ($isTriple) {
+    if ($isPoker) echo "<h1>Te ha tocado Poker</h1>";
+    else echo "<h1>Te ha tocado Trio</h1>";
+}
+if ($isDouble) echo "<h1>Te ha tocado Pareja</h1>";
+
+
+echo "<div style='display: flex;gap: 10px'>";
+echo '<img src="../imgs/dice/dado' . $dices[0] . '.jpg" alt="dice' . $dices[0] . '"> ';
+echo '<img src="../imgs/dice/dado' . $dices[1] . '.jpg" alt="dice' . $dices[1] . '">';
+echo '<img src="../imgs/dice/dado' . $dices[2] . '.jpg" alt="dice' . $dices[2] . '">';
+echo "</div>";
+
+?>
 <form action="ejercicio4.php" method="post">
     <button type="submit">Tirar dados</button>
 </form>
-<?php
-$rolledDices = array();
-
-for ($i = 0; $i < 3; $i++) {
-    $rolledDices[] = rand(1,6);
-}
-
-echo '<img src="../imgs/dice' . $rolledDices[0] . '.jpg" alt="dice' . $rolledDices[0] . '"><br> ';
-echo '<img src="../imgs/dice' . $rolledDices[1] . '.jpg" alt="dice' . $rolledDices[1] . '"><br>';
-echo '<img src="../imgs/dice' . $rolledDices[2] . '.jpg" alt="dice' . $rolledDices[2] . '"><br>';
-
-$sortedDices = $rolledDices;
-$checkUnique = array_unique($rolledDices);
-sort($sortedDices);
-
-
-if ($rolledDices == $sortedDices){
-    echo $sortedDices[0] . " ". $sortedDices[1] . " ". $sortedDices[2];
-    echo "<h1>Escalera</h1>";
-}
-
-echo $rolledDices[0] . " " .$rolledDices[1] . " " . $rolledDices[2];
-
-?>
 </body>
 </html>
 

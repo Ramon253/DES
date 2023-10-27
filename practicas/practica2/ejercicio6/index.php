@@ -30,22 +30,6 @@
             <br><label for="numGames">Numero de partidas a jugar</label><br>
             <input id="numGames" name="numberOfGames" type="number" required>
         </div>
-        <div>
-            <br><label for="player1">Jugador 1</label><br>
-            <select id="player1" name="player1" required>
-                <option value="1">Piedra</option>
-                <option value="2">Papel</option>
-                <option value="3">Tijera</option>
-            </select>
-        </div>
-        <div>
-            <br><label for="player2" >Jugador 2</label><br>
-            <select id="player2" name="player2" required>
-                <option value="1">Piedra</option>
-                <option value="2">Papel</option>
-                <option value="3">Tijera</option>
-            </select><br><br>
-        </div>
         <button type="submit">Intentar</button>
     </form>
 </div>

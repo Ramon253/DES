@@ -21,8 +21,8 @@
 
 <?php
 $numGames = $_POST["numberOfGames"];
-$player1Play = $_POST["player1"];
-$player2Play = $_POST["player2"];
+$player1Play = rand(1,3);
+$player2Play = rand(1,3);
 $player1Wins = intval($_POST["player1Wins"]);
 $player2Wins = intval($_POST["player2Wins"]);
 $player1Img = "";
@@ -113,22 +113,7 @@ if ($numGames == $player2Wins){
         <input id="player1Name" name="player1Name" type="hidden" value="<?= $player1Name ?>">
         <input id="player2Name" name="player2Name" type="hidden" value="<?= $player2Name ?>">
         <input id="numGames" name="numberOfGames" type="hidden" value="<?= $numGames ?>" required>
-        <div>
-            <br><label for="player1"><?= $player1Name ?></label><br>
-            <select id="player1" name="player1" required>
-                <option value="1">Piedra</option>
-                <option value="2">Papel</option>
-                <option value="3">Tijera</option>
-            </select>
-        </div>
-        <div>
-            <br><label for="player2"><?= $player2Name ?></label><br>
-            <select id="player2" name="player2" required>
-                <option value="1">Piedra</option>
-                <option value="2">Papel</option>
-                <option value="3">Tijera</option>
-            </select><br><br>
-        </div>
+
         <button type="submit">Intentar</button>
     </form>
 </div>
