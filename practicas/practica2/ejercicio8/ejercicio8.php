@@ -39,8 +39,6 @@ sort($sortedNumbers);
 
 if (count(array_unique($suits)) == 1) {
     $color = true;
-
-
 }
 
 if(count(array_unique($displayValues))== 2){

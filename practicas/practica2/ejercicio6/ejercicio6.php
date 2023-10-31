@@ -1,3 +1,14 @@
+<?php
+$options = ["", "piedra", "papel", "tijera"];
+$numGames = $_POST["numberOfGames"];
+$player1Play = rand(1,3);
+$player2Play = rand(1,3);
+$player1Wins = intval($_POST["player1Wins"]);
+$player2Wins = intval($_POST["player2Wins"]);
+$player1Img = "";
+$player2Img = "";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +31,6 @@
     <h1>Piedra papel o tijera</h1>
 
 <?php
-$numGames = $_POST["numberOfGames"];
-$player1Play = rand(1,3);
-$player2Play = rand(1,3);
-$player1Wins = intval($_POST["player1Wins"]);
-$player2Wins = intval($_POST["player2Wins"]);
-$player1Img = "";
-$player2Img = "";
-
 /*Logica juego*/
 if ($player2Play == $player1Play) {
     echo "<h2>Empate</h2>";
@@ -55,29 +58,8 @@ if ($player2Play == $player1Play) {
 $player1Name = ($_POST["player1Name"] == null) ? "Jugador 1" : $_POST["player1Name"];
 $player2Name = ($_POST["player2Name"] == null) ? "Jugador 2" : $_POST["player2Name"];
 
-switch ($player1Play) {
-    case 1 :
-        $player1Img = "piedra";
-        break;
-    case 2 :
-        $player1Img = "papel";
-        break;
-    case 3:
-        $player1Img = "tijera";
-        break;
-}
-
-switch ($player2Play) {
-    case 1 :
-        $player2Img = "piedra";
-        break;
-    case 2 :
-        $player2Img = "papel";
-        break;
-    case 3:
-        $player2Img = "tijera";
-        break;
-}
+$player1Img = $options[$player1Play];
+$player2Img = $options[$player2Play];
 
 ?>
 </div>
