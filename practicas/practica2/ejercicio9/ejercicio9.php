@@ -1,3 +1,2 @@
-
 <?php
-    include "../ejercicio4/";
+require "./views/head" . $_POST["header"] . ".html";
