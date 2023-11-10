@@ -1,0 +1,35 @@
+
+.banner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.banner h1{
+
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+}
+.banner span {
+    font-size: 15px;
+    color: black;
+}
+
+.banner.valorant{background-image: linear-gradient(to right,white, #fd4350,#fd4350,#fd4350, white );}
+.banner.r6s {background-image: linear-gradient(to right, #000,#000000,darkgray,#fff, #fff);}
+.banner.cs2{background-image: linear-gradient(to right, #000,#000000,darkgray,#000, #000);}
+.cs2 h1 {font-size: 25px}
+.valorant h1{color: white; font-size: 25px}
+
+
+
+main {
+    display: flex;
+    align-items: center;
+    flex-basis: 250px;
+    flex-flow: column;
+}
+main.r6s{
+    background-color: #292526;
+    color: white;
+}

@@ -14,15 +14,26 @@ $css = $_POST["css"];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 9</title>
     <link rel="stylesheet" href="./css/style<?= $css ?>.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Asap", sans-serif;
+        }
+        .banner img{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-</body>
-</html>
-
 <?php
-
 require 'views/header/header'.$header.'.php';
 require 'views/body/body'.$body.'.php';
 require 'views/footer/footer'.$footer.'.php';
 ?>
+
+</body>
+</html>
+

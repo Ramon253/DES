@@ -8,6 +8,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 9</title>
+
 </head>
 <body>
 <form action="ejercicio9.php" method="post" style="display: flex ;width: 300px;gap: 20px;flex-wrap: wrap">
