@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+form {
+    display: flex;
+    gap: 30px;
+    flex-flow: column wrap
+}
+label{
+    padding: 10px;
+    background-color: #0f1c4d;
+    border-radius: 15px 0 0 15px ;
+    color: aliceblue;
+    margin: 0;
+}
+button{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px;
+    background-color: #0f1c4d;
+    color: aliceblue;
+
+}
+select{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+}
+div{
+    display: flex;
+}
