@@ -1,43 +1,141 @@
-
+/*Header*/
 .banner {
     display: flex;
     flex-flow: column;
     align-items: center;
 }
-.banner h1{
+
+.banner h1 {
 
     font-size: 25px;
     color: white;
     padding: 20px;
 }
+
 .banner span {
     font-size: 15px;
     color: black;
 }
 
-.banner.valorant{background-image: linear-gradient(to right,white, #fd4350,#fd4350,#fd4350, white );}
-.banner.r6s {background-image: linear-gradient(to right, #000,#000000,darkgray,#fff, #fff);}
-.banner.cs2{background-image: linear-gradient(to right, #000,#293545,#000);}
-.cs2 h1 {font-size: 25px}
-.valorant h1{color: white; font-size: 25px}
+.banner.valorant {
+    background-image: linear-gradient(to right, white, #fd4350, #fd4350, #fd4350, white);
+}
 
+.banner.r6s {
+    background-image: linear-gradient(to right, #000, #000, #1e1e1e, #1e1e1e, #fff, #fff);
+}
 
+.banner.cs2 {
+    background-image: linear-gradient(to right, #06070b, #06070b, #101721, #3a4451, #434953, #111520);
+}
 
+.cs2 h1 {
+    font-size: 25px
+}
+
+.valorant h1 {
+    color: white;
+    font-size: 25px
+}
+
+/*Main*/
 main {
     display: flex;
-    align-items: center;
-    flex-basis: 250px;
+    place-content: center;
+    padding-top: 30px;
+    color: whitesmoke;
+}
+
+main section {
+    display: flex;
+    place-items: center;
     flex-flow: column wrap;
+    gap: 30px;
+    padding: 30px;
+    width: 60%;
+    border-radius: 15px;
 }
-main img{
-    width: 150px;
-    height: 100px;
+
+main img {
+    width: 100%;
+    height: auto;
 }
-main.r6s{
-    background-color: #292526;
-    color: white;
+
+main.cs2 {
+    background-color: #000;
 }
-main.cs2{
-    background-color:  #293545;
+
+main.valorant {
+    color: black;
+    background-color: #fff6f9;
+}
+
+main.r6s {
+    background-color: #0a0907;
+}
+
+main.r6s section {
+    background-color: #1e1e1e;
+}
+
+main.valorant section {
+    background-color: #ffa3ac;
+}
+
+/*Footer*/
+footer{
+    padding-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    color: whitesmoke;
+    align-items: center;
+}
+
+.menu {
+    margin-top: 30px;
+    padding: 40px 20px 20px 20px ;
+    display: flex;
+    gap: 30px;
+    flex-flow: column wrap;
+    place-content: center;
+    align-items: center;
+    color: whitesmoke;
+    width: 70%;
+    background: #1e1e1e;
+    border-radius: 15px;
+}
+.menu h4{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.menu div {
+    display: flex;
+    place-content: flex-start;
+    width: 100%;
+}
+.menu div a{
+    text-decoration: none;
+}
+footer h2{
+    align-self: center;
+    font-size: 40px;
+}
+
+footer.r6s {
+    background-color: #0a0907;
+}
+
+footer.cs2 {
+    background: black;
+}
+
+footer.valorant {
+    background: #fff6f9;
+}
+
+.valorant h1 {
+    color: black
 }
 
