@@ -12,6 +12,6 @@
             <strong>Destrucción del entorno:</strong> Siege permite una destrucción significativa del entorno, lo que significa que los
             jugadores pueden crear agujeros en las paredes y pisos para sorprender a los oponentes.
         </p>
-        <img src="../imgs/fps/gameplays/r6sGameplay.jpg" alt="">
+        <img src="../imgs/fps/gameplays/r6sGameplay.jpg" alt="r6Gameplay">
     </section>
 </main>

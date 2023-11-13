@@ -1,18 +1,11 @@
 <footer class="valorant">
+    <h2>Menu</h2>
     <section class="menu">
-        <h1>Menu</h1>
-        <div>
-            <h4></h4>
-            <a href="https://store.ubisoft.com/es/tom-clancy-s-rainbow-six--siege/56c4948c88a7e300458b485e.html">Ubisoft store</a>
-            <a href="https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/ ">Steam</a>
+        <div class="option">
+            <h4>¿Donde puedo consegui valorant? </h4>
+            <div>
+
+                <a href="https://playvalorant.com/es-es/" target="_blank">Riot Games</a>
+            </div>
         </div>
-        <div>
-            <h4></h4>
-            <a href=""></a>
-        </div>
-        <div>
-            <h4></h4>
-            <a href=""></a>
-        </div>
-    </section>
 </footer>

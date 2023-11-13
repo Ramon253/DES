@@ -101,27 +101,38 @@ footer{
     place-content: center;
     align-items: center;
     color: whitesmoke;
-    width: 70%;
+    width: auto;
     background: #1e1e1e;
     border-radius: 15px;
+    margin-bottom: 150px;
 }
 .menu h4{
     text-decoration: none;
     font-weight: normal;
 }
 
-.menu div {
+.menu .option {
     display: flex;
-    place-content: flex-start;
+    flex-flow: row wrap;
+    place-content: space-between;
     width: 100%;
+    gap: 100px;
+    padding: 20px;
+    border-radius: 10px;
 }
 .menu div a{
     text-decoration: none;
+    background-color: #114c7c;
+    color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 15px;
 }
-footer h2{
-    align-self: center;
-    font-size: 40px;
+
+.menu div a:hover{
+    background: black;
 }
+
 
 footer.r6s {
     background-color: #0a0907;
