@@ -15,6 +15,7 @@
     <label for="race2">Raza 2
         <input type="radio" name="race" id="race2">
     </label>
+    <label for=""></label>
 </form>
 </body>
 </html>
