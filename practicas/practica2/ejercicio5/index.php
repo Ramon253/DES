@@ -1,3 +1,7 @@
+<?php
+const CLASSES = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard", "Artificer"];
+const RACES = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-elf", "Halfling", "Half-Orc", "Human", "Tiefling"];
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,13 +13,7 @@
 </head>
 <body>
 <form action="ejercicio5.php" method="post">
-    <label for="race">Raza1
-        <input type="radio" name="race" id="race1">
-    </label>
-    <label for="race2">Raza 2
-        <input type="radio" name="race" id="race2">
-    </label>
-    <label for=""></label>
+
 </form>
 </body>
 </html>
