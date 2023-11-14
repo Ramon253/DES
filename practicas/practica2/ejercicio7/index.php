@@ -22,9 +22,9 @@
         </div>
 
         <div>
-            <label for="salary">Sueldo</label>
-            <input type="range" name="salary" id="salary" max="120000" step="100" value="0" required>
-            <span id="output"></span>
+            <label for="salaryInput">Sueldo</label>
+            <input type="range" class="rangeInput" name="salary" id="salaryInput" max="120000" step="100" value="0"  required>
+            <span id="salaryOutput"></span>
         </div>
 
 
@@ -52,14 +52,6 @@
     </form>
 </div>
 <!--Script para darle estetica al boton range-->
-<script>
-    let output = document.getElementById("output")
-    let salaryInput = document.getElementById("salary")
-
-    salaryInput.addEventListener("input", (e) => {
-        e.preventDefault()
-        output.innerHTML = document.getElementById("salary").value
-    })
-</script>
+<script src="../js/rangeInput.js"></script>
 </body>
 </html>

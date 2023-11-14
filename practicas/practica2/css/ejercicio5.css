@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    font-family: sans-serif;
+}
+main form{
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    gap: 20px;
+}
+
+
+.radioContainer {
+    display: flex;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    place-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fd4350;
+    flex-basis: 90px;
+}
+.checkContainer {
+    display: flex;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    place-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffa3ac         ;
+    flex-basis: 90px;
+}
+
