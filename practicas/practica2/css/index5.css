@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 70%;
+    height: auto;
+}
+.radioContainer {
+    display: flex;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    place-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fd4350;
+    flex-basis: 90px;
+}
+.checkContainer {
+    display: flex;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    place-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffa3ac         ;
+    flex-basis: 90px;
+}
+
