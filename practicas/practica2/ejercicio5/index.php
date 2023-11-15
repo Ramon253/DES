@@ -12,6 +12,13 @@ require("consts.php");
         <link rel="stylesheet" href="../css/index5.css">
     </head>
     <body>
+    <h1>
+        <?php
+        if (!empty($_GET["message"])) {
+            echo $_GET["message"];
+        }
+        ?>
+    </h1>
     <main>
         <form action="ejercicio5.php" method="post">
 

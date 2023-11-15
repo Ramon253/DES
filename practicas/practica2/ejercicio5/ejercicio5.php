@@ -2,8 +2,8 @@
 require("consts.php");
 
 $character = [
-    "name" => $_POST["name"],
-    "race" => $_POST["races"]
+    "Name" => $_POST["name"],
+    "Race" => $_POST["races"]
 ];
 $media = 0;
 foreach (CHARACTERISTICS as $characteristic) {
@@ -15,20 +15,23 @@ foreach (CHARACTERISTICS as $characteristic) {
     $media += $character[$characteristic];
 }
 
+if ($media / 6 > 15) {
+    header("Location: index.php?message=Demasiada mierda");
+}
 $characterAttributes = [
-    "background" => $_POST["background"],
-    "alignment" => $_POST["alignment"],
-    "expPoints" => $_POST["exp"],
-    "age" => $_POST["age"],
-    "weight" => $_POST["weight"],
-    "height" => $_POST["height"],
-    "hairColor" => $_POST["hairColor"],
-    "skinColor" => $_POST["skinColor"],
-    "eyesColor" => $_POST["eyesColor"]
+    "Background" => $_POST["background"],
+    "Alignment" => $_POST["alignment"],
+    "ExpPoints" => $_POST["exp"],
+    "Age" => $_POST["age"],
+    "Weight" => $_POST["weight"],
+    "Height" => $_POST["height"],
+    "HairColor" => $_POST["hairColor"],
+    "SkinColor" => $_POST["skinColor"],
+    "EyesColor" => $_POST["eyesColor"]
 ];
 
 
-$cont = 0;
+$cont = 1;
 $classes = array_diff($_POST, $characterAttributes, $character);
 foreach ($classes as $class) {
     $character["class" . $cont++] = $class;
@@ -41,6 +44,7 @@ foreach ($classes as $class) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../imgs/icon/dndIcon.png">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -48,22 +52,50 @@ foreach ($classes as $class) {
     <link rel="stylesheet" href="../css/ejercicio5.css">
 </head>
 <body>
+<main class="charSheet">
+    <h1>D&D</h1>
+    <div class="container">
+        <div class="baseStatsContainer">
+            <?php
+            foreach ($character as $attName => $charAtt) {
 
+                if (in_array($attName, CHARACTERISTICS)) {
+                    echo '<div class ="characteristic">';
+                } else echo '<div class ="' . $attName . '">';
+                if ($attName === "class1")
+                    echo '<h2>Primary class : '.$charAtt.'</h2>';
+                elseif ($attName === "class2")
+                    echo '<h2>Secondry class : '.$charAtt.'</h2>';
+                else
+                    echo '<h2>' . $attName . ' : ' . $charAtt . ' </h2>';
+                echo '</div>';
+            }
+            ?>
+            <div class="imgContainer">
+                <?php
+                if ($character["Race"] === "Human" || $character["Race"] === "Dwarf") {
+                    echo '<img src="../imgs/d&d/' . $character["Race"] . '/' . $character["Race"] . $character["class1"] . '.png" alt="' . $character["Race"] . $character["class1"] . '">';
+                } else {
+                    echo '<img src="../imgs/d&d/' . $character["Race"] . '.webp" alt="ns">';
+                }
+                ?>
+            </div>
+        </div>
 
-<?php
-if ($character["race"] === "Human" || $character["race"] === "Dwarf") {
+        <div class="AttributesContainer">
+            <?php
+            foreach ($characterAttributes as $attName => $charAtt) {
+                echo '<div class ="' . $attName . '">';
+                echo '<h2>' . $attName . ': '.$charAtt.'</h2>';
+                echo '</div>';
+            }
+            ?>
 
-    foreach ($character as $characterAtt) {
-        echo $characterAtt . "<br>";
-    }
-    foreach ($characterAttributes as $characterAtt) {
-        echo $characterAtt . "<br>";
-    }
-} else {
-    echo '<img src="../imgs/d&d/' . $character["race"] . '/' . $character["race"] . $character["class0"] . '.png" alt="' . $character["race"] . $character["class0"] . '">';
-    echo '<img src="../imgs/d&d/' . $character["race"] . '.webp" alt="ns">';
-}
-?>
-
+        </div>
+    </div>
+</main>
+<script>
+    document.getElementsByClassName("class1" || "class2")
+</script>
 </body>
 </html>
