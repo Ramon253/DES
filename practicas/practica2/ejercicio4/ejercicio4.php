@@ -22,7 +22,7 @@ for ($j = 0; $j < 3; $j++) {
     } else $sortedDices[1] = $dices[$j];
 
 }
-echo $sortedDices[0] . " " . $sortedDices[1] . " " . $sortedDices[2];
+
 
 
 //Ahora que se ha ordenado
@@ -37,13 +37,13 @@ for ($i = 1; $i < count($sortedDices); $i++) {
 }
 
 if ($sortedDices[0] === $sortedDices[1] || $sortedDices[1] === $sortedDices[2]) {
-
     if ($sortedDices[0] === $sortedDices[2]) {
         $isTriple = true;
-        if ($sortedDices[0] = 1) $isPoker = true;
+        if ($sortedDices[0] === 1) $isPoker = true;
 
     } else $isDouble = true;
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -53,20 +53,26 @@ if ($sortedDices[0] === $sortedDices[1] || $sortedDices[1] === $sortedDices[2]) 
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 4</title>
+    <link rel="stylesheet" href=".././css/ejercicio4.css">
 </head>
 <body>
+<main>
 <?php
+
 if ($isStraight) {
     echo "<h1>Te ha tocado escalera</h1>";
-}
-if ($isTriple) {
-    if ($isPoker) echo "<h1>Te ha tocado Poker</h1>";
-    else echo "<h1>Te ha tocado Trio</h1>";
-}
-if ($isDouble) echo "<h1>Te ha tocado Pareja</h1>";
+} elseif ($isTriple) {
+    if ($isPoker)
+        echo "<h1>Te ha tocado Poker</h1>";
+    else
+        echo "<h1>Te ha tocado Trio</h1>";
+} elseif ($isDouble)
+    echo "<h1>Te ha tocado Pareja</h1>";
+else
+    echo "<h1>No te ha salido nada </h1>";
 
 
-echo "<div style='display: flex;gap: 10px'>";
+echo "<div class='imgContainer'>";
 echo '<img src="../imgs/dice/dado' . $dices[0] . '.jpg" alt="dice' . $dices[0] . '"> ';
 echo '<img src="../imgs/dice/dado' . $dices[1] . '.jpg" alt="dice' . $dices[1] . '">';
 echo '<img src="../imgs/dice/dado' . $dices[2] . '.jpg" alt="dice' . $dices[2] . '">';
@@ -76,6 +82,7 @@ echo "</div>";
 <form action="ejercicio4.php" method="post">
     <button type="submit">Tirar dados</button>
 </form>
+</main>
 </body>
 </html>
 

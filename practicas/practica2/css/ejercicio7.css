@@ -1,0 +1,23 @@
+body{
+    background-color: #1e1e1e;
+}
+table {
+    margin-top: 30px;
+    width: 80%;
+    align-content: center;
+    appearance: none;
+    border-collapse: collapse ;
+    border: whitesmoke 2px solid;
+    font-family: "Roboto", sans-serif;
+    color: whitesmoke;
+}
+
+ table td, th{
+    border: 2px solid whitesmoke;
+    margin: 0;
+     padding: 5px;
+}
+
+.selected {
+    background-color: #1abc9c;
+}

@@ -72,6 +72,7 @@ for ($i = 0; $i < count($sortedNumbers)-1;) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 8</title>
+    <link rel="stylesheet" href="../css/ejercicio8.css">
 </head>
 <body>
 <h1>Tus cartas:</h1>
@@ -94,9 +95,8 @@ if ($full)
 
 <div style="display: flex">
     <?php
-
     for ($i = 0; $i < count($hand); $i++) {
-        echo '<span style="width: 150px;  height: 250px;border: solid 2px; display: grid; border-radius: 10px;margin: 20px">';
+        echo '<span class="card">';
 
         echo '<span style="place-self: start;margin:10px 0 0 10px;font-size: 25px;display: grid">';
         echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';

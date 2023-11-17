@@ -1,18 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 6</title>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
-    <style>
-        div{
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/index6.css">
 </head>
 <body>
-<div class="container" style="margin-top: 20px">
+<main>
+    <div class="container">
     <h1>Piedra papel o tijera</h1>
     <form action="ejercicio6.php" method="post">
         <input name="player1Wins" type="hidden" value="0">
@@ -33,5 +31,6 @@
         <button type="submit">Intentar</button>
     </form>
 </div>
+</main>
 </body>
 </html>

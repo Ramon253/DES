@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 7</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        div{
-            margin: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/index7.css">
 </head>
 <body>
 <div  class="container">
@@ -29,12 +22,14 @@
 
 
         <div>
-            <label for="sex"><strong>Sexo</strong></label><br>
-            <label for="male">Hombre </label>
-            <input type="radio" name="sex" id="male" value="M" required>
+            <h3>Sexo</h3>
+            <main>
+                <label for="male">Hombre </label>
+                <input type="radio" name="sex" id="male" value="M" required>
 
-            <label for="female">Mujer </label>
-            <input type="radio" name="sex" id="female" value="F" required>
+                <label for="female">Mujer </label>
+                <input type="radio" name="sex" id="female" value="F" required>
+            </main>
         </div>
 
 
@@ -46,9 +41,7 @@
                 } ?>
             </select>
         </div>
-        <div>
             <button type="submit">Enviar</button>
-        </div>
     </form>
 </div>
 <!--Script para darle estetica al boton range-->

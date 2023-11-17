@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    font-family: "Roboto", sans-serif;
+
+}
+form{
+    display: flex;
+    color: whitesmoke;
+    padding: 20px;
+    flex-flow: column wrap;
+    place-content: center;
+    align-items: baseline;
+    gap: 20px;
+    width: 50%;
+    border-radius: 15px;
+}
+form label{
+    padding: 10px;
+    background-color: #0f1c4d;
+    border-radius: 15px 0 0 15px ;
+    color: aliceblue;
+    margin: 0;
+}
+form div{
+    display: flex;
+}
+form select{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+}
+form button{
+    align-self: center;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px;
+    background-color: #0f1c4d;
+    color: aliceblue;
+}

@@ -1,0 +1,38 @@
+.imgContainer{
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.imgContainer img{
+    border-radius: 15px;
+}
+main{
+    gap: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    align-items: center;
+    width: 70%;
+    background: #434953;
+    color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    padding: 40px;
+    border-radius: 15px;
+}
+button{
+    background: #1abc9c;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    color: whitesmoke;
+}
+button:hover{
+    background: black;
+}
+
+body{
+    display: flex;
+    place-content: center;
+    background: black;
+}

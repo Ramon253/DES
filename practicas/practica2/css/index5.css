@@ -107,8 +107,8 @@ form h1 {
     gap: 20px;
     flex-flow: row wrap;
     place-content: space-between;
-
 }
+
 .selectContainer{
     display: flex;
     flex-flow: row;
