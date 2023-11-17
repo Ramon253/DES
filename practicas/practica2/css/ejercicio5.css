@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: "San Francisco", sans-serif;
+    color: whitesmoke;
 }
 
 h1 {
@@ -16,71 +17,110 @@ main {
     place-content: center;
     align-items: center;
     color: whitesmoke;
-    background-color: #0a0907;
+    background-color: #3a4451;
 }
 
 .container {
     display: flex;
     flex-flow: column wrap;
-    width: 70%;
+    width: 50%;
     place-content: center;
     align-items: center;
-    background-color: #434953;
+    background-color: #151519;
     border-radius: 15px;
     margin: 20px;
     gap: 50px;
-    padding: 5%;
+    padding: 2%;
 }
 
 .baseStatsContainer {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     place-content: center;
-    gap: 100px;
-    background-color: antiquewhite;
+    align-items: center;
+    background-color: #434953;
+    gap: 50px;
     padding: 5%;
     border-radius: 15px;
     color: black;
 }
 
-.baseStatsContainer div {
-    display: flex;
-    place-content: center;
-}
 
 .imgContainer {
     display: flex;
-    background: antiquewhite;
+    background: #434953;
     width: 100%;
     margin-top: 0;
     place-content: center;
     border-radius: 0 0 15px 15px;
-    order: 4;
 }
 
 
-.baseStatsContainer .name {
-    width: 40%;
-    order: 1;
-}
-.baseStatsContainer .race{
-    width: 40%;
-    order: 2;
-}
-.baseStatsContainer .class1{
-    order :3
-}
-.baseStatsContainer .class2{
-    order :3
-}
 .imgContainer img {
-    width: 80%;
+
     min-width: 300px;
     height: auto;
     border-radius: 15px;
 }
-.baseStatsContainer .characteristic{
-    order: 100;
+
+.baseStatsContainer header {
+    display: flex;
+    flex-flow: row wrap;
+    place-content: space-evenly;
+    background: #1a1f29;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 15px;
+    color: whitesmoke;
+    width: 100%;
 }
 
+.baseStatsContainer .characteristic {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: space-around;
+    background: #1a1f29;
+    padding: 30px;
+    gap: 30px;
+    border-radius: 15px;
+    color: whitesmoke;
+    align-items: center;
+    align-content: center;
+}
+
+.baseStatsContainer .characteristic h2 {
+    height: 30%;
+}
+
+.AttributesContainer {
+    place-self: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 50px;
+    place-content: space-around;
+    width: 80%;
+}
+
+.AttributesContainer #Background {
+    background: #3a4451;
+    border-radius: 15px;
+    padding: 5%;
+}
+
+#SkinColor {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#HairColor {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#EyesColor {
+    padding: 20px;
+    border-radius: 10px;
+}

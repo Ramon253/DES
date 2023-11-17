@@ -4,35 +4,201 @@
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
-.imgContainer{
-    place-self: center;
-}
-form{
+
+main{
+    width: 100%;
+    padding-top: 50px;
     display: flex;
-    flex-flow: column wrap;
-    width: 70%;
-    height: auto;
-}
-.radioContainer {
-    display: flex;
-    flex-flow: column wrap;
-    width: auto;
-    height: auto;
+    flex-flow: column ;
     place-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fd4350;
-    flex-basis: 90px;
+    align-items: center;
+    background-color: #0a0907;
+    color: whitesmoke;
 }
-.checkContainer {
+main form{
+    box-sizing: content-box;
+    width: 750px;
     display: flex;
     flex-flow: column wrap;
-    width: auto;
-    height: auto;
+    border-radius: 15px;
+    gap: 50px;
+    align-items: center;
+    background: #3a4451;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+h1{
+    font-size: 75px;
+    padding-bottom: 50px;
+}
+form h1 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+.textContainer{
     place-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    background: #ffa3ac         ;
-    flex-basis: 90px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    width: 100%;
+    border-radius: 15px;
+    gap: 10px;
+    background: #1a1f29;
+}
+.textContainer > *{
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+#background{
+    width: 100%;
 }
 
+.radioContainer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    place-content: center;
+    width: 100%;
+}
+.radioContainer label{
+    width: 210px;
+    padding: 20px;
+    display: flex;
+    place-content: space-evenly;
+    background: #fd4350;
+    border-radius: 15px;
+}
+
+.radioContainer h2{
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.radioContainer.checkContainer label{
+    background: #115f90;
+}
+
+.rangeContainer{
+    display: flex;
+    flex-flow:column wrap;
+    gap: 30px;
+    place-content: space-evenly;
+    align-items: end;
+    background: #1a1f29;
+    width: 100%;
+    padding: 3%;
+    border-radius: 15px;
+}
+.layoutRange{
+    padding-top: 20px;
+    display: flex;
+    flex-flow:column wrap;
+    gap: 30px;
+    align-items: center;
+    background-color: #1a1f29;
+    width: 100%;
+    border-radius: 15px;
+}
+.rangeContainer label{
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+    place-content: space-between;
+
+}
+.selectContainer{
+    display: flex;
+    flex-flow: row;
+}
+.selectContainer select{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+}
+.selectContainer label{
+    padding: 15px;
+    background-color: #115f90;
+    border-radius: 15px 0 0 15px ;
+    color: aliceblue;
+    margin: 0;
+}
+.numContainer{
+    display: flex;
+    flex-flow: wrap column;
+    place-content: space-around;
+    width: 50%;
+    background-color: #1a1f29;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 10px;
+}
+.numContainer input{
+    width: 25%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.colorWrapper{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    align-items: center;
+    background-color: #1a1f29;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.colorWrapper h2{
+    margin: 20px;
+}
+.colorContainer label{
+    padding: 15px;
+    background-color: #115f90;
+    border-radius: 15px 0 0 15px ;
+    color: aliceblue;
+    margin: 0;
+    height: 100%;
+}
+.colorContainer{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    place-content: center;
+    width: 50%;
+    border-radius: 15px;
+    height: 50px;
+}
+.colorContainer input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    height: 58px;
+    padding: 0;
+    width: 60px;
+    appearance: none;
+    background-color: transparent;
+}
+.colorContainer input::-webkit-color-swatch {
+    border: none;
+    border-radius: 0 15px 15px 0;
+}
+.colorContainer input::-moz-color-swatch {
+    border: none;
+    border-radius: 0 15px 15px 0;
+}
+form button{
+    color: whitesmoke;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+}

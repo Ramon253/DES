@@ -39,6 +39,7 @@ foreach ($classes as $class) {
         break;
     }
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -50,52 +51,78 @@ foreach ($classes as $class) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 5</title>
     <link rel="stylesheet" href="../css/ejercicio5.css">
+    <style>
+        #SkinColor{
+            background-color: <?= $characterAttributes["SkinColor"]?> ;
+        }
+        #EyesColor{
+            background-color: <?= $characterAttributes["EyesColor"]?> ;
+        }#HairColor{
+            background-color: <?= $characterAttributes["HairColor"]?> ;
+        }
+    </style>
 </head>
 <body>
 <main class="charSheet">
-    <h1>D&D</h1>
     <div class="container">
+        <h1>D&D</h1>
         <div class="baseStatsContainer">
-            <?php
-            foreach ($character as $attName => $charAtt) {
-
-                if (in_array($attName, CHARACTERISTICS)) {
-                    echo '<div class ="characteristic">';
-                } else echo '<div class ="' . $attName . '">';
-                if ($attName === "class1")
-                    echo '<h2>Primary class : '.$charAtt.'</h2>';
-                elseif ($attName === "class2")
-                    echo '<h2>Secondry class : '.$charAtt.'</h2>';
-                else
-                    echo '<h2>' . $attName . ' : ' . $charAtt . ' </h2>';
-                echo '</div>';
-            }
-            ?>
-            <div class="imgContainer">
+            <header>
                 <?php
-                if ($character["Race"] === "Human" || $character["Race"] === "Dwarf") {
-                    echo '<img src="../imgs/d&d/' . $character["Race"] . '/' . $character["Race"] . $character["class1"] . '.png" alt="' . $character["Race"] . $character["class1"] . '">';
-                } else {
-                    echo '<img src="../imgs/d&d/' . $character["Race"] . '.webp" alt="ns">';
+                foreach ($character as $statName => $stat) {
+
+                    if (in_array($statName, CHARACTERISTICS))
+                        continue;
+
+                    echo '<h2 class="' . $statName . '">';
+                    if ($statName === "class1")
+                        echo 'Primary class : ' . $stat;
+                    elseif ($statName === "class2")
+                        echo 'Secondary class : ' . $stat;
+                    else
+                        echo $statName . ' : ' . $stat;
+
+                    echo '</h2>';
                 }
+                echo '</header>'
                 ?>
-            </div>
+                <div class="imgContainer">
+                    <?php
+                    if ($character["Race"] === "Human" || $character["Race"] === "Dwarf") {
+                        echo '<img src="../imgs/d&d/' . $character["Race"] . '/' . $character["Race"] . $character["class1"] . '.png" alt="' . $character["Race"] . $character["class1"] . '">';
+                    } else {
+                        echo '<img src="../imgs/d&d/' . $character["Race"] . '.webp" alt="ns">';
+                    }
+                    ?>
+                </div>
+
+                <div class="characteristic">
+                    <?php
+                    foreach (CHARACTERISTICS as $characteristic) {
+                        echo '<h2>';
+                        echo $characteristic . ' : ' . $character[$characteristic];
+                        echo '</h2>';
+                    }
+                    ?>
+                </div>
         </div>
 
         <div class="AttributesContainer">
             <?php
-            foreach ($characterAttributes as $attName => $charAtt) {
-                echo '<div class ="' . $attName . '">';
-                echo '<h2>' . $attName . ': '.$charAtt.'</h2>';
-                echo '</div>';
+            foreach ($characterAttributes as $attName => $attribute) {
+                if ($attName === "Background") {
+                    echo '<div id="' . $attName . '">';
+                    echo '<h2>' . $attName . ' : </h2><br> <p>' . $attribute . '</p>';
+                    echo '</div>';
+                    continue;
+                }
+                echo '<h2 id="' . $attName . '">' . $attName . ' : ' . $attribute . '</h2>';
             }
             ?>
 
         </div>
     </div>
 </main>
-<script>
-    document.getElementsByClassName("class1" || "class2")
-</script>
+
 </body>
 </html>
