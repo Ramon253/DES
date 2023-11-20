@@ -47,7 +47,7 @@
                 <option value="3">3</option>
             </select>
         </div>
-        <button type="submit">enviar</button>
+        <button type="submit">Enviar</button>
     </form>
 </main>
 </body>

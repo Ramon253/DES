@@ -93,21 +93,21 @@ if ($full)
 
 ?>
 
-<div style="display: flex">
+<div class="cardsContainer">
     <?php
     for ($i = 0; $i < count($hand); $i++) {
         echo '<span class="card">';
 
-        echo '<span style="place-self: start;margin:10px 0 0 10px;font-size: 25px;display: grid">';
-        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
+        echo '<span class="topPart">';
+        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" class="content" alt="' . $suits[$i] . '">';
         echo '</span>';
 
-        echo '<span style="place-self: center;height: 50%">';
-        echo '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 40px;width: 40px" alt="'.$suits[$i].'">';
+        echo '<span class="midPart">';
+        echo '<img src="../imgs/cards/' . $suits[$i] . '.png" class="content" id="midPart" alt="'.$suits[$i].'">';
         echo '</span>';
 
-        echo '<span style="place-self: end;margin:0 10px 10px 0;font-size: 25px;display: grid;transform: rotate(180deg)">';
-        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" style="height: 15px;width: 15px" alt="' . $suits[$i] . '">';
+        echo '<span class="bottomPart">';
+        echo $displayValues[$i] . '<img src="../imgs/cards/' . $suits[$i] . '.png" class="content" alt="' . $suits[$i] . '">';
         echo '</span>';
         echo '</span>';
     }

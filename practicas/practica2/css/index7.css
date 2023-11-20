@@ -1,3 +1,4 @@
+
 body{
     background-color: #434953;
     display: flex;
@@ -35,6 +36,10 @@ body{
     padding: 20px;
     border-radius: 10px;
 }
+.container div input{
+    padding: 5px;
+    border-radius: 10px;
+}
 
 .container button{
     border: none;
@@ -42,6 +47,43 @@ body{
     background-color: #1abc9c;
     color: whitesmoke;
     font-size: 20px;
+    border-radius: 15px;
+}
+form select{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+}
+form label.select{
+    padding: 10px;
+    background-color: #1abc9c;
+    border-radius: 15px 0 0 15px ;
+    color: aliceblue;
+    margin: 0;
+}
+.container div.select{
+    display: flex;
+    flex-flow: row;
+    gap: 0;
+}
+.radioContainer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    place-content: center;
+    width: 60%;
+}
+.radioContainer label:first-child{
+    background-color: #114c7c;
+}
+
+.radioContainer label{
+    width: 210px;
+    padding: 20px;
+    display: flex;
+    place-content: space-evenly;
+    background: #fd4350;
     border-radius: 15px;
 }
 

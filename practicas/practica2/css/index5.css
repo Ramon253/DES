@@ -35,6 +35,12 @@ form h1 {
     font-size: 30px;
     margin-top: 30px;
 }
+label input{
+    background-color: whitesmoke;
+}
+label textarea{
+    background-color: whitesmoke;
+}
 .textContainer{
     place-content: center;
     display: flex;
@@ -201,4 +207,8 @@ form button{
     border: none;
     border-radius: 15px;
     font-size: 20px;
+}
+form button:hover{
+    background-color: #0a0907;
+    color: #1abc9c;
 }

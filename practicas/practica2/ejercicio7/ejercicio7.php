@@ -5,22 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <style>
-        table{
-            margin-top: 30px;
-            width: 80%;
-            align-content: center;
-
-        }
-        table, th, td{
-            border: 2px solid black;
-            padding: 0;
-        }
-        .selected{
-            background-color: lightgreen;
-        }
-    </style>
     <title>Ejercicio 7</title>
     <link rel="stylesheet" href="../css/ejercicio7.css">
 </head>

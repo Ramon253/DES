@@ -4,6 +4,17 @@ body {
     align-items: center;
     place-content: center;
     font-family: "Roboto", sans-serif;
+    background-color: #0a0907;
+    color: whitesmoke;
+}
+
+.cardsContainer{
+    display: flex;
+    flex-flow: wrap;
+    padding: 20px;
+    background-color: #3a4451;
+    border-radius: 15px;
+    color: black;
 }
 
 .card {
@@ -12,5 +23,36 @@ body {
     border: solid 2px;
     display: grid;
     border-radius: 10px;
-    margin: 20px
+    margin: 20px;
+    background-color: white;
+}
+
+.card .topPart {
+    place-self: start;
+    margin: 10px 0 0 10px;
+    font-size: 25px;
+    display: grid
+}
+
+.card .midPart {
+    place-self: center;
+    height: 50%
+}
+
+.card .bottomPart {
+    place-self: end;
+    margin: 0 10px 10px 0;
+    font-size: 25px;
+    display: grid;
+    transform: rotate(180deg)
+}
+
+.card .content {
+    height: 15px;
+    width: 15px
+}
+
+.card .midPart .content  {
+    height: 40px;
+    width: 40px
 }

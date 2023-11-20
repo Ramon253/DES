@@ -1,3 +1,6 @@
+body{
+    background-color: #1a1f29;
+}
 main {
     display: flex;
     flex-flow: column;
@@ -7,8 +10,14 @@ main {
 }
 form {
     display: flex;
-    gap: 30px;
-    flex-flow: column wrap
+    gap: 50px;
+    padding: 50px;
+    flex-flow: column wrap;
+    background-color: #3a4451;
+    border-radius: 15px;
+}
+h1{
+    color: whitesmoke;
 }
 label{
     padding: 10px;
@@ -18,9 +27,9 @@ label{
     margin: 0;
 }
 button{
-    font-size: 15px;
+    font-size: 20px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px;
     background-color: #0f1c4d;
     color: aliceblue;
@@ -33,4 +42,8 @@ select{
 }
 div{
     display: flex;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: #0f1c4d;
 }
