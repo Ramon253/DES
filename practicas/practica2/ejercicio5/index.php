@@ -45,7 +45,7 @@ require("consts.php");
             echo '<h2>Class of the character (choose 2 max)</h2>';
             foreach (CLASSES as $class) {
                 echo '<label for="' . $class . '">' . $class;
-                echo '<input type="checkbox" name="classes' . $cont++ . '" value="' . $class . '" id="' . $class . '" >';
+                echo '<input type="checkbox" name="classes[]" value="' . $class . '" id="' . $class . '" >';
                 echo '</label>';
             }
             echo '</div>';

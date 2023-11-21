@@ -3,7 +3,8 @@ require("consts.php");
 
 $character = [
     "Name" => $_POST["name"],
-    "Race" => $_POST["races"]
+    "Race" => $_POST["races"],
+    "Classes" => $_POST["classes"]
 ];
 $media = 0;
 foreach (CHARACTERISTICS as $characteristic) {
@@ -31,14 +32,6 @@ $characterAttributes = [
 ];
 
 
-$cont = 1;
-$classes = array_diff($_POST, $characterAttributes, $character);
-foreach ($classes as $class) {
-    $character["class" . $cont++] = $class;
-    if ($cont > 2) {
-        break;
-    }
-}
 
 ?>
 <!doctype html>
@@ -75,11 +68,11 @@ foreach ($classes as $class) {
                         continue;
 
                     echo '<h2 class="' . $statName . '">';
-                    if ($statName === "class1")
-                        echo 'Primary class : ' . $stat;
-                    elseif ($statName === "class2")
-                        echo 'Secondary class : ' . $stat;
-                    else
+                    if ($statName === "Classes") {
+                        echo 'Primary class : ' . $stat[0];
+                        echo "<br>";
+                        echo 'Secondary class : ' . $stat[1];
+                        } else
                         echo $statName . ' : ' . $stat;
 
                     echo '</h2>';
