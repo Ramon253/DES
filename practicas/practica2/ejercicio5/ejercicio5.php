@@ -35,6 +35,8 @@ $characterAttributes = [
     "SkinColor" => $_POST["skinColor"],
     "EyesColor" => $_POST["eyesColor"]
 ];
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -75,6 +77,7 @@ $characterAttributes = [
                     echo '<h2 class="' . $statName . '">';
                     if ($statName === "Classes") {
                         echo 'Primary class : ' . $stat[0];
+
                         echo '</h2>';
                         if (!empty($stat[1])) {
                             echo '<h2 class="' . $statName . '">';
@@ -83,6 +86,7 @@ $characterAttributes = [
                         }
                         continue;
                     } else
+
                         echo $statName . ' : ' . $stat;
 
                     echo '</h2>';

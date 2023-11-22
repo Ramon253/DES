@@ -56,7 +56,10 @@ require("consts.php");
             echo '<h2>Class of the character </h2>';
             foreach (CLASSES as $class) {
                 echo '<label for="' . $class . '">' . $class;
-                echo '<input type="checkbox" name="classes[]" value="' . $class . '" id="' . $class . '" >';
+                if ($class === "Bard")
+                    echo '<input type="checkbox" name="classes[]" checked value="' . $class . '" id="' . $class . '" >';
+                else
+                    echo '<input type="checkbox" name="classes[]" value="' . $class . '" id="' . $class . '" >';
                 echo '</label>';
             }
             echo '</div>';
