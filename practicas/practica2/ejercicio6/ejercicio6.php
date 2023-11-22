@@ -1,12 +1,17 @@
 <?php
+//Declaracion de variables
 $options = ["piedra", "papel", "tijera"];
 $numGames = $_POST["numberOfGames"];
+
 $player1Play = rand(1,3);
 $player2Play = rand(1,3);
+
 $player1Wins = intval($_POST["player1Wins"]);
 $player2Wins = intval($_POST["player2Wins"]);
+
 $player1Img = "";
 $player2Img = "";
+
 $player1Name = ($_POST["player1Name"] == null) ? "Jugador 1" : $_POST["player1Name"];
 $player2Name = ($_POST["player2Name"] == null) ? "Jugador 2" : $_POST["player2Name"];
 ?>
@@ -25,9 +30,10 @@ $player2Name = ($_POST["player2Name"] == null) ? "Jugador 2" : $_POST["player2Na
     <header>
     <h1>Piedra papel o tijera</h1>
 <?php
-/*Logica juego*/
+/*Logica del juego*/
 if ($player2Play == $player1Play) {
     echo "<h2>Empate</h2>";
+    //si es piedra o tijera
 } else if (abs($player2Play - $player1Play) === 2) {
 
     if ($player1Play == 1) {
@@ -37,6 +43,7 @@ if ($player2Play == $player1Play) {
         echo "<h2>Victoria  de " . $player1Name . "</h2>";
         $player2Wins++;
     }
+    //Si alguno es pale simplemente gana el mas alto
 } else if ($player2Play > $player1Play) {
     echo "<h2>Victoria de " . $player2Name . "</h2>";
     $player2Wins++;

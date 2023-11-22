@@ -24,15 +24,19 @@ $family = array_keys(DECK);
 <h1>Inserte 5 cartas</h1>
 <form action="ejercicio8.php" method="post">
     <?php
+    if (!empty($_GET["message"])){
+        echo '<h1>'. $_GET["message"] .'</h1>';
+    }
+
+    //Creacion del select
     for ($j = 0; $j < 5; $j++) {
         echo '<div>';
         echo ' <label for="' . ORDER[$j] . '">' . ORDER[$j] . ' carta</label>';
         echo ' <select name="' . ORDER[$j] . '" id="' . ORDER[$j] . '" >';
 
-        for ($i = 0; $i < count(DECK); $i++) {
-            $cards = DECK[$family[$i]];
-            foreach ($cards as $card) {
-                echo '<option value="' . $card . $family[$i] . '">' . $card . " " . $family[$i] . '</option>';
+        foreach (DECK as $suit => $cards) {
+            foreach ($cards as  $card) {
+                echo '<option value="' . $card . $suit . '">' . $card . " " . $suit . '</option>';
             }
         }
         echo "</select >";

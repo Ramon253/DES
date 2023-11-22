@@ -48,6 +48,6 @@
     </form>
 </div>
 <!--Script para darle estetica al boton range-->
-<script src="../js/rangeInput.js"></script>
+<script src="../js/exercise7VisualFeatures.js"></script>
 </body>
 </html>

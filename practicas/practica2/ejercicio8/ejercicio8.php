@@ -1,4 +1,5 @@
 <?php
+//Declaracion de varibles
 const SAMPLE = ['J' => 11, 'Q' => 12, 'K' => 13, 'A' => 14];
 $hand = [$_POST["Primera"], $_POST["Segunda"], $_POST["Tercera"], $_POST["Cuarta"], $_POST["Quinta"]];
 $suits = [];
@@ -11,18 +12,17 @@ $full = false;
 $poker = false;
 $straight = false;
 
-
+//Comprobacion de que son 5 cartas distintas
 if (count(array_unique($hand)) != 5){
-    echo " <h1>Inserte 5 cartas distintas</h1>";
-    echo "<form action='index.php'>";
-    echo "<button type='submit'>Intentar de nuevo</button>";
-    echo "</form>";
+    header("Location: index.php?message=Introduzca 5 cartas distintas");
     return;
 }
 
+//Guardo cada numero y cada palo en arrays distintos
 foreach ($hand as $card) {
     if ($card[0] == 1) {
         $displayValues[] = 10;
+        $numericValues[] = 10;
         $suits[] = substr($card, 2);
         continue;
     }
@@ -47,11 +47,10 @@ if (count(array_unique($suits)) == 1) {
 }
 
 //check if is full or poker
-if(count(array_unique($displayValues))== 2){
+if(count(array_unique($displayValues)) == 2){
     if ($sortedNumbers[1]  !== $sortedNumbers[3]) $full = true;
     else $poker = true;
 }
-
 //check if is straigt
 for ($i = 0; $i < count($sortedNumbers)-1;) {
     if ($sortedNumbers[$i] === ($sortedNumbers[++$i]) - 1) {
@@ -77,7 +76,7 @@ for ($i = 0; $i < count($sortedNumbers)-1;) {
 <body>
 <h1>Tus cartas:</h1>
 <?php
-
+//Display values
 if ($color) {
     if ($straight)
         echo "<h1>ESCALERA DE COLOR</h1>";
@@ -93,6 +92,7 @@ if ($full)
 
 ?>
 
+<!--Creo cada carta con html y css-->
 <div class="cardsContainer">
     <?php
     for ($i = 0; $i < count($hand); $i++) {

@@ -1,23 +1,29 @@
 <?php
 require("consts.php");
 
+//Array asociativo principal
 $character = [
     "Name" => $_POST["name"],
-    "Race" => $_POST["races"]
+    "Race" => $_POST["races"],
+    "Classes" => $_POST["classes"]
 ];
+
+//Cargo y compruebo las caracteristicas
 $media = 0;
 foreach (CHARACTERISTICS as $characteristic) {
     $character[$characteristic] = $_POST[$characteristic];
     if ($character[$characteristic] > 20) {
-        echo "Que hases bobo";
-        return;
+        header("Location: index.php?=Each characteristic must be less tha 20");
+        exit();
     }
     $media += $character[$characteristic];
 }
 
 if ($media / 6 > 15) {
-    header("Location: index.php?message=Demasiada mierda");
+    header("Location: index.php?message=The average of the characteristics must be less than 15");
+    exit();
 }
+//Array asociativo del resto de datos
 $characterAttributes = [
     "Background" => $_POST["background"],
     "Alignment" => $_POST["alignment"],
@@ -29,17 +35,6 @@ $characterAttributes = [
     "SkinColor" => $_POST["skinColor"],
     "EyesColor" => $_POST["eyesColor"]
 ];
-
-
-$cont = 1;
-$classes = array_diff($_POST, $characterAttributes, $character);
-foreach ($classes as $class) {
-    $character["class" . $cont++] = $class;
-    if ($cont > 2) {
-        break;
-    }
-}
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,13 +47,16 @@ foreach ($classes as $class) {
     <title>Ejercicio 5</title>
     <link rel="stylesheet" href="../css/ejercicio5.css">
     <style>
-        #SkinColor{
-            background-color: <?= $characterAttributes["SkinColor"]?> ;
+        #SkinColor {
+            background-color: <?= $characterAttributes["SkinColor"]?>;
         }
-        #EyesColor{
-            background-color: <?= $characterAttributes["EyesColor"]?> ;
-        }#HairColor{
-            background-color: <?= $characterAttributes["HairColor"]?> ;
+
+        #EyesColor {
+            background-color: <?= $characterAttributes["EyesColor"]?>;
+        }
+
+        #HairColor {
+            background-color: <?= $characterAttributes["HairColor"]?>;
         }
     </style>
 </head>
@@ -69,17 +67,22 @@ foreach ($classes as $class) {
         <div class="baseStatsContainer">
             <header>
                 <?php
+                //saco por pantalla las cosas en el orden que quiero
                 foreach ($character as $statName => $stat) {
-
                     if (in_array($statName, CHARACTERISTICS))
                         continue;
 
                     echo '<h2 class="' . $statName . '">';
-                    if ($statName === "class1")
-                        echo 'Primary class : ' . $stat;
-                    elseif ($statName === "class2")
-                        echo 'Secondary class : ' . $stat;
-                    else
+                    if ($statName === "Classes") {
+                        echo 'Primary class : ' . $stat[0];
+                        echo '</h2>';
+                        if (!empty($stat[1])) {
+                            echo '<h2 class="' . $statName . '">';
+                            echo '  Secondary class : ' . $stat[1];
+                            echo '</h2>';
+                        }
+                        continue;
+                    } else
                         echo $statName . ' : ' . $stat;
 
                     echo '</h2>';
@@ -88,8 +91,9 @@ foreach ($classes as $class) {
                 ?>
                 <div class="imgContainer">
                     <?php
+                    //Cargo la imagen
                     if ($character["Race"] === "Human" || $character["Race"] === "Dwarf") {
-                        echo '<img src="../imgs/d&d/' . $character["Race"] . '/' . $character["Race"] . $character["class1"] . '.png" alt="' . $character["Race"] . $character["class1"] . '">';
+                        echo '<img src="../imgs/d&d/' . $character["Race"] . '/' . $character["Race"] . $character["Classes"][0] . '.png" alt="' . $character["Race"] . $character["Classes"][0] . '">';
                     } else {
                         echo '<img src="../imgs/d&d/' . $character["Race"] . '.webp" alt="ns">';
                     }

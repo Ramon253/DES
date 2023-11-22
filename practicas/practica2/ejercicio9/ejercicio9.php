@@ -27,13 +27,11 @@ $css = $_POST["css"];
     </style>
 </head>
 <body>
-
 <?php
 require 'views/header/header'.$header.'.php';
 require 'views/body/body'.$body.'.php';
 require 'views/footer/footer'.$footer.'.php';
 ?>
-
 </body>
 </html>
 
