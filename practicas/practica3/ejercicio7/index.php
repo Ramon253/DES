@@ -8,5 +8,22 @@
 <title>ejercicio7</title>
 </head>
 <body>
+<form action="./ejercicio7.php" method=post>
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" >
+    </div>
+    <div>
+        <label for="date">Nombre</label>
+        <input type="date" id="date" name="date" >
+    </div>
+    <div>
+        <label for="time">Nombre</label>
+        <input type="time" id="time" name="time" >
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+</form>
 </body>
 </html>
