@@ -1,10 +1,9 @@
 <?php
-/*
-getDates($_POST["date"], $_POST["time"]);*/
-getDates("2020-12-12", "02:01");
+
+getDates($_POST["date"], $_POST["time"]);
+
 function getDates($date, $time)
 {
-    $weekend = ["Sat" => true, "Sun" => true];
     $daysOfWeek = [
         "Sun" => 'Domingo',
         "Mon" => 'Lunes',
@@ -14,22 +13,47 @@ function getDates($date, $time)
         "Fri" => 'Viernes',
         "Sat" => 'Sábado'
     ];
-    $userBirthday = new DateTime($date . $time);
+    $months = [
+        "Jan" => "Enero",
+        "Feb" => "Febrero",
+        "Mar" => "Marzo",
+        "Apr" => "Abril",
+        "May" => "Mayo",
+        "Jun" => "Junio",
+        "Jul" => "Julio",
+        "Aug" => "Agosto",
+        "Sep" => "Septiembre",
+        "Oct" => "Octubre",
+        "Nov" => "Noviembre",
+        "Dec" => "Diciembre",
+    ];
+
+    print $daysOfWeek["Thu"];
+    $userBirthday = date_create($date . $time);
+    print $userBirthday->format("d/m/Y") . "<br>";
     $timeUntilChristmas = getNextChristmas();
     $timeUntilEaster = getNextEaster();
+    $easterYear = $timeUntilEaster["year"];
+    $timeUntilEaster = $timeUntilEaster["timeUntilEaster"];
     $season = getSeason();
     $name = $_POST["name"];
+
 
     print "Bienvenido $name ,";
     print "estás en $season ";
     print "Quedan $timeUntilChristmas->days dias para las vacaciones de navidad y ";
-    print "$timeUntilEaster->days dias $timeUntilEaster->h horas para vacaciones de semana santa del año que viene."; //TODO
+    print "$timeUntilEaster->days dias $timeUntilEaster->h horas para vacaciones de semana santa ";
+    if ($easterYear === intval(date("Y"))){
+        print " de este año ";
+    }else
+        print " del año que viene ";
 
     print "Tu cumpleaños ";
-    if ($weekend[$userBirthday->format("D")])
-        print "Cae";
-    print " en finde y es el dia ";
-    print   $daysOfWeek[$userBirthday->format("D")] . ", " . $userBirthday->format("d");
+    if (intval($userBirthday->format("N")) <= 5 )
+        print "no";
+
+    print " cae en finde y es el dia ";
+    print   $daysOfWeek[$userBirthday->format("D")] . ", " . $userBirthday->format("d") . " de " . $months[$userBirthday->format("M")] . " del " . $userBirthday->format("y");
 
 }
 
@@ -62,7 +86,7 @@ function getNextChristmas(): DateInterval
     return date_diff($curDate, $christmas);
 }
 
-function getNextEaster(): DateInterval
+function getNextEaster(): Array
 {
     $curDate = new DateTime();
     $easter = new DateTime("March 24");
@@ -70,7 +94,10 @@ function getNextEaster(): DateInterval
     if ($curDate > $easter)
         date_modify($easter, "+1 year");
 
-    return date_diff($curDate, $easter);
+    return [
+        "timeUntilEaster" => date_diff($curDate, $easter),
+        "year" => intval($easter->format("Y"))
+    ];
 
 }
 

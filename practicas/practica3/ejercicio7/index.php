@@ -9,16 +9,17 @@
 </head>
 <body>
 <form action="./ejercicio7.php" method=post>
+    <h1>Tu cumpleaños</h1>
     <div>
         <label for="name">Nombre</label>
         <input type="text" id="name" name="name" >
     </div>
     <div>
-        <label for="date">Nombre</label>
+        <label for="date">Fecha de tu cumpleaños</label>
         <input type="date" id="date" name="date" >
     </div>
     <div>
-        <label for="time">Nombre</label>
+        <label for="time">Hora de tu cumpleaños</label>
         <input type="time" id="time" name="time" >
     </div>
     <div>
