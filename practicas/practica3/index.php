@@ -6,14 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
+    <link rel="stylesheet" href="../practica2/css/index.css">
 </head>
 <body>
+<main>
+    <?php
+    for ($i = 4; $i < 9; $i++) {
+        print '<div>';
+        print "<a href='./ejercicio$i'>Ejericicio $i</a>";
+        print '</div>';
+    }
+    ?>
+</main>
 
 </body>
 </html>
-<?php
-for ($i = 4; $i < 9; $i++) {
-    print '<div>';
-    print "<a href='./ejercicio$i'>Ejericicio $i</a>";
-    print '</div>';
-}

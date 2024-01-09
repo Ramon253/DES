@@ -20,7 +20,9 @@
             <input type="text" class="form-control" aria-label="numero 2" name="num2">
         </div>
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-primary" type="submit">
+                Enviar
+            </button>
         </div>
     </div>
 </form>

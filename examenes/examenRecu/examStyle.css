@@ -1,0 +1,26 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+.approved{
+    background-color: #1abc9c;
+}
+.denied{
+    background-color: red;
+}
+
+table{
+    border-collapse: collapse;
+}
+td, th{
+    border: 2px solid #1e1e1e;
+    min-width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    justify-content: center;
+}
